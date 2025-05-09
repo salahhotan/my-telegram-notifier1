@@ -4,8 +4,7 @@
   # publish = "public" # or your site's build output directory
   functions = "netlify/functions"
 
-# Optional: Create a nicer URL for your function
-[[redirects]]
-  from = "/api/send-message"
-  to = "/.netlify/functions/send_telegram"
-  status = 200 # This makes it act like a rewrite
+redirects
+     from = "/api/*"
+     to = "/.netlify/functions/:splat"
+     status = 200
