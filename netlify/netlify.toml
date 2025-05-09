@@ -1,0 +1,11 @@
+[build]
+  # This is not strictly necessary for functions-only deploys,
+  # but good practice if you have a site too.
+  # publish = "public" # or your site's build output directory
+  functions = "netlify/functions"
+
+# Optional: Create a nicer URL for your function
+[[redirects]]
+  from = "/api/send-message"
+  to = "/.netlify/functions/send_telegram"
+  status = 200 # This makes it act like a rewrite
